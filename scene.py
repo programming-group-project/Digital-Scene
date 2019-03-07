@@ -37,13 +37,6 @@ def clear():
 
 speed(0)
 
-def infiniteCircle():
-    speed(0)
-    penup()
-    setposition(0, -305)
-    while (10 > 9):
-        simple_circle(10)
-
 def drawCanvas(height, width):
     penup()
     setposition(-width/2, -height/2)
@@ -56,7 +49,19 @@ def drawCanvas(height, width):
     penup()
     setposition(0, 0)
     pendown()
+drawCanvas(400,600)
+# Make Touch Here
+#---------------------------------------------------------------------
 
 
-drawCanvas(400, 600)
-infiniteCircle()
+
+
+#---------------------------------------------------------------------
+# No Touch
+def inf_Circle():
+    speed(0)
+    penup()
+    setposition(0,-305)
+    while 1 == 1:
+        simple_circle(5)
+inf_Circle()
