@@ -33,3 +33,18 @@ def end_fill():
     draw.end_fill()
 def clear():
     draw.clear()
+speed(0)
+# Building Functions
+def drawCanvas(height,width):
+    penup()
+    setposition(height/2,width/2)
+    pendown()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    penup()
+    setposition(0,0)
+    pendown()
+drawCanvas(400,600)
