@@ -34,9 +34,11 @@ def end_fill():
 def clear():
     draw.clear()
 speed(0)
+# Variable List
 canvas_height = 400
 canvas_width = 600
-# Building Functions
+
+# No Touch
 def drawCanvas(height, width):
     penup()
     setposition(-width/2,-height/2)
@@ -49,7 +51,12 @@ def drawCanvas(height, width):
     penup()
     setposition(0,0)
     pendown()
-drawCanvas(canvas_height,canvas_width)
+def inf_Circle():
+    speed(0)
+    penup()
+    setposition(0,-canvas_height/2 - 5)
+    while 1 == 1:
+        simple_circle(5)
 
 # Make Touch Here
 #---------------------------------------------------------------------
@@ -71,11 +78,10 @@ def draw_Building(height, width, col): #Sage
 
 #---------------------------------------------------------------------
 
-# No Touch
-def inf_Circle():
-    speed(0)
-    penup()
-    setposition(0,-canvas_height/2 - 5)
-    while 1 == 1:
-        simple_circle(5)
-inf_Circle()
+# Compile Everything Here
+def draw_scene():
+    drawCanvas(canvas_height,canvas_width)
+
+
+    inf_Circle()
+draw_scene()
