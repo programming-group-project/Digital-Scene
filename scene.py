@@ -1,5 +1,6 @@
 import turtle
 draw = turtle.Turtle()
+
 # QOL Functions
 def forward(dist):
     draw.forward(dist)
@@ -33,3 +34,29 @@ def end_fill():
     draw.end_fill()
 def clear():
     draw.clear()
+
+speed(0)
+
+def infiniteCircle():
+    speed(0)
+    penup()
+    setposition(0, -305)
+    while (10 > 9):
+        simple_circle(10)
+
+def drawCanvas(height, width):
+    penup()
+    setposition(-width/2, -height/2)
+    pendown()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    penup()
+    setposition(0, 0)
+    pendown()
+
+
+drawCanvas(400, 600)
+infiniteCircle()
