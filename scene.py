@@ -38,6 +38,7 @@ speed(0)
 # Variable List
 canvas_height = 400
 canvas_width = 600
+water_height = 100
 
 # No Touch
 def drawCanvas(height, width):
@@ -104,6 +105,7 @@ def draw_Building(height, width, col): #Sage
 # Compile Everything Here
 def draw_scene():
     drawCanvas(canvas_height,canvas_width)
+    draw_water(water_height)
     inf_Circle()
 
 draw_scene()
