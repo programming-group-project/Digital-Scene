@@ -34,11 +34,12 @@ def end_fill():
     draw.end_fill()
 def clear():
     draw.clear()
-
-speed(3)
+speed(0)
+# Variable List
 canvas_height = 400
 canvas_width = 600
 
+# No Touch
 def drawCanvas(height, width):
     penup()
     setposition(-width/2, -height/2)
@@ -51,12 +52,20 @@ def drawCanvas(height, width):
     penup()
     setposition(0, 0)
     pendown()
-drawCanvas(canvas_height, canvas_width)
+def inf_Circle():
+    speed(0)
+    penup()
+    setposition(0,-canvas_height/2 - 5)
+    while 1 == 1:
+        simple_circle(5)
 # Make Touch Here
 #---------------------------------------------------------------------
-def shimmer(length, width): # Gabe
-    #placeholder
+def shimmer(length, width, x, y): # Gabe
+    #This draws the shimmers in the water
     penup()
+    setposition(x, y)
+    
+
 
 def draw_water(water_height): # Gabe
     # This draws the water at the bottom of the canvas
@@ -76,17 +85,27 @@ def draw_water(water_height): # Gabe
     end_fill()
     right(180)
 
-
-
+def draw_Building(height, width, col): #Sage
+    # Draws Rectangle based on given parameters
+    penup()
+    backward(width/2)
+    pendown()
+    color(col)
+    begin_fill()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    end_fill()
+    penup()
+    forward(width/2)
 
 #---------------------------------------------------------------------
-# No Touch
-def inf_Circle():
-    speed(0)
-    penup()
-    setposition(0, -canvas_height/2 - 5)
-    while 1 == 1:
-        simple_circle(5)
 
-draw_water(100)
-inf_Circle()
+# Compile Everything Here
+def draw_scene():
+    drawCanvas(canvas_height,canvas_width)
+    inf_Circle()
+
+draw_scene()
