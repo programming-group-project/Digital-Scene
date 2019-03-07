@@ -35,7 +35,9 @@ def end_fill():
 def clear():
     draw.clear()
 
-speed(0)
+speed(3)
+canvas_height = 400
+canvas_width = 600
 
 def drawCanvas(height, width):
     penup()
@@ -49,9 +51,30 @@ def drawCanvas(height, width):
     penup()
     setposition(0, 0)
     pendown()
-drawCanvas(400,600)
+drawCanvas(canvas_height, canvas_width)
 # Make Touch Here
 #---------------------------------------------------------------------
+def shimmer(length, width): # Gabe
+    #placeholder
+    penup()
+
+def draw_water(water_height): # Gabe
+    # This draws the water at the bottom of the canvas
+    penup()
+    setposition(-canvas_width/2, -canvas_height/2)
+    pendown()
+    color("#006994")
+    begin_fill()
+    left(90)
+    forward(water_height)
+    right(90)
+    forward(canvas_width)
+    right(90)
+    forward(water_height)
+    right(90)
+    forward(canvas_width)
+    end_fill()
+    right(180)
 
 
 
@@ -61,7 +84,9 @@ drawCanvas(400,600)
 def inf_Circle():
     speed(0)
     penup()
-    setposition(0,-305)
+    setposition(0, -canvas_height/2 - 5)
     while 1 == 1:
         simple_circle(5)
+
+draw_water(100)
 inf_Circle()
