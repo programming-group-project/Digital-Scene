@@ -84,7 +84,7 @@ def draw_water(water_height): # Gabe
     end_fill()
     right(180)
 
-def draw_Building(height, width, col): #Sage
+def draw_large_building(height, width, col): # Sage
     # Draws Rectangle based on given parameters
     penup()
     backward(width/2)
@@ -99,7 +99,21 @@ def draw_Building(height, width, col): #Sage
     end_fill()
     penup()
     forward(width/2)
-
+def draw_small_buidling(height, width, col): # Sage
+    # Draws Rectangle based on given parameters and has roof
+    penup()
+    backward(width/2)
+    pendown()
+    color(col)
+    begin_fill()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    end_fill()
+    penup()
+    forward(width/2)
 #---------------------------------------------------------------------
 
 # Compile Everything Here
