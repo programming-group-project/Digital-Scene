@@ -37,7 +37,7 @@ speed(0)
 # Building Functions
 def drawCanvas(height,width):
     penup()
-    setposition(height/2,width/2)
+    setposition(-width/2,-height/2)
     pendown()
     for i in range(2):
         forward(width)
@@ -48,3 +48,10 @@ def drawCanvas(height,width):
     setposition(0,0)
     pendown()
 drawCanvas(400,600)
+def inf_Circle():
+    speed(0)
+    penup()
+    setposition(0,-305)
+    while 1 == 1:
+        simple_circle(5)
+inf_Circle()
