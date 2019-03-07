@@ -34,8 +34,10 @@ def end_fill():
 def clear():
     draw.clear()
 speed(0)
+canvas_height = 400
+canvas_width = 600
 # Building Functions
-def drawCanvas(height,width):
+def drawCanvas(height, width):
     penup()
     setposition(-width/2,-height/2)
     pendown()
@@ -47,19 +49,33 @@ def drawCanvas(height,width):
     penup()
     setposition(0,0)
     pendown()
-drawCanvas(400,600)
+drawCanvas(canvas_height,canvas_width)
+
 # Make Touch Here
 #---------------------------------------------------------------------
-
-
-
+def draw_Building(height, width, col): #Sage
+    # Draws Rectangle based on given parameters
+    penup()
+    backward(width/2)
+    pendown()
+    color(col)
+    begin_fill()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    end_fill()
+    penup()
+    forward(width/2)
 
 #---------------------------------------------------------------------
+
 # No Touch
 def inf_Circle():
     speed(0)
     penup()
-    setposition(0,-305)
+    setposition(0,-canvas_height/2 - 5)
     while 1 == 1:
         simple_circle(5)
 inf_Circle()
