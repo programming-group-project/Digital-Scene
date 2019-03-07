@@ -1,5 +1,6 @@
 import turtle
 draw = turtle.Turtle()
+# QOL Functions
 def forward(dist):
     draw.forward(dist)
 def backward(dist):
