@@ -65,8 +65,6 @@ def shimmer(length, width, x, y): # Gabe
     penup()
     setposition(x, y)
     
-
-
 def draw_water(water_height): # Gabe
     # This draws the water at the bottom of the canvas
     penup()
