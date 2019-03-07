@@ -48,6 +48,14 @@ def drawCanvas(height,width):
     setposition(0,0)
     pendown()
 drawCanvas(400,600)
+# Make Touch Here
+#---------------------------------------------------------------------
+
+
+
+
+#---------------------------------------------------------------------
+# No Touch
 def inf_Circle():
     speed(0)
     penup()
