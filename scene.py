@@ -167,7 +167,8 @@ def draw_small_buidling(x, y, height, width, col): # Sage
     penup()
     right(225)
     forward(width/2)
-def draw_buildings():
+def draw_buildings(): # Sage
+    # Draws City Skyline
     penup()
     building_x = -canvas_width/2 + 10
     building_y = -canvas_height/2 + water_height
