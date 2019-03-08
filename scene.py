@@ -41,6 +41,8 @@ speed(0)
 canvas_height = 400
 canvas_width = 600
 water_height = 100
+sun_size = 100
+sky_height = 300
 color_1 = "#979DA8"
 color_2 = "#777B82"
 color_3 = "#B3BBC9"
@@ -172,9 +174,9 @@ def draw_small_buidling(x, y, height, width, col): # Sage
 # Compile Everything Here
 def draw_scene():
     drawCanvas(canvas_height,canvas_width)
-    draw_sky(300)
+    draw_sky(sky_height)
     draw_water(water_height)
-    draw_sun(100)
+    draw_sun(sun_size)
     inf_Circle()
 
 draw_scene()
