@@ -177,6 +177,10 @@ def draw_scene():
     draw_sky(sky_height)
     draw_water(water_height)
     draw_sun(sun_size)
+    """
+    for i in range (canvas_height):
+        draw_sun(i)
+    """
     inf_Circle()
 
 draw_scene()
