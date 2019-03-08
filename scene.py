@@ -1,4 +1,6 @@
 import turtle
+import math
+import random
 draw = turtle.Turtle()
 
 # QOL Functions
@@ -61,10 +63,6 @@ def inf_Circle():
         simple_circle(5)
 # Make Touch Here
 #---------------------------------------------------------------------
-def shimmer(length, width, x, y): # Gabe
-    #This draws the shimmers in the water
-    penup()
-    setposition(x, y)
     
 def draw_water(water_height): # Gabe
     # This draws the water at the bottom of the canvas
@@ -84,9 +82,10 @@ def draw_water(water_height): # Gabe
     end_fill()
     right(180)
 
-def draw_large_building(height, width, col): # Sage
+def draw_large_building(x, y, height, width, col): # Sage
     # Draws Rectangle based on given parameters
     penup()
+    setposition(x,y)
     backward(width/2)
     pendown()
     color(col)
@@ -99,9 +98,10 @@ def draw_large_building(height, width, col): # Sage
     end_fill()
     penup()
     forward(width/2)
-def draw_small_buidling(height, width, col): # Sage
+def draw_small_buidling(x, y, height, width, col): # Sage
     # Draws Rectangle based on given parameters and has roof
     penup()
+    setposition(x,y)
     backward(width/2)
     pendown()
     color(col)
@@ -113,7 +113,18 @@ def draw_small_buidling(height, width, col): # Sage
         left(90)
     end_fill()
     penup()
+    setposition(x + width/2, y + height)
+    pendown()
+    begin_fill()
+    left(135)
+    forward(width / math.sqrt(2))
+    left(90)
+    forward(width / math.sqrt(2))
+    end_fill()
+    penup()
+    right(225)
     forward(width/2)
+
 #---------------------------------------------------------------------
 
 # Compile Everything Here
