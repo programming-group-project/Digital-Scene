@@ -181,6 +181,7 @@ def draw_scene():
     for i in range (canvas_height):
         draw_sun(i)
     """
+    
     inf_Circle()
 
 draw_scene()
