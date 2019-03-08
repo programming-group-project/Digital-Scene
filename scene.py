@@ -60,15 +60,29 @@ def inf_Circle():
         simple_circle(5)
 # Make Touch Here
 #---------------------------------------------------------------------
-def shimmer(length, width, x, y): # Gabe
-    #This draws the shimmers in the water
+def shimmer(l1, l2, l3, l4, l5, l6, w1, w2, w3, w4, w5, w6,x, y): # Gabe
+    #This draws the shimmers in the water.
     penup()
     setposition(x, y)
-    
+    pendown()
+    color("white")
+    pensize(w1)
+    forward(l1)
+    pensize(w2)
+    forward(l2)
+    pensize(w3)
+    forward(l3)
+    pensize(w4)
+    forward(l4)
+    pensize(w5)
+    forward(l5)
+    pensize(w6)
+    forward(l6)
+
 
 
 def draw_water(water_height): # Gabe
-    # This draws the water at the bottom of the canvas
+    # This draws the water at the bottom of the canvas. water_height is always 100.
     penup()
     setposition(-canvas_width/2, -canvas_height/2)
     pendown()
@@ -84,6 +98,10 @@ def draw_water(water_height): # Gabe
     forward(canvas_width)
     end_fill()
     right(180)
+    penup()
+    setposition(0, 0)
+    pendown()
+    shimmer(1, 10, 15, 13, 5, 1, 1, 3, 7, 4, 8, 1, -250, -150)
 
 def draw_Building(height, width, col): #Sage
     # Draws Rectangle based on given parameters
@@ -106,6 +124,7 @@ def draw_Building(height, width, col): #Sage
 # Compile Everything Here
 def draw_scene():
     drawCanvas(canvas_height,canvas_width)
+    draw_water(100)
     inf_Circle()
 
 draw_scene()
