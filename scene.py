@@ -41,6 +41,9 @@ speed(0)
 canvas_height = 400
 canvas_width = 600
 water_height = 100
+color_1 = "#979DA8"
+color_2 = "#777B82"
+color_3 = "#B3BBC9"
 
 # No Touch
 def drawCanvas(height, width):
