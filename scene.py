@@ -60,29 +60,8 @@ def inf_Circle():
         simple_circle(5)
 # Make Touch Here
 #---------------------------------------------------------------------
-def shimmer(l1, l2, l3, l4, l5, l6, w1, w2, w3, w4, w5, w6,x, y): # Gabe
-    #This draws the shimmers in the water.
-    penup()
-    setposition(x, y)
-    pendown()
-    color("white")
-    pensize(w1)
-    forward(l1)
-    pensize(w2)
-    forward(l2)
-    pensize(w3)
-    forward(l3)
-    pensize(w4)
-    forward(l4)
-    pensize(w5)
-    forward(l5)
-    pensize(w6)
-    forward(l6)
-
-
-
 def draw_water(water_height): # Gabe
-    # This draws the water at the bottom of the canvas. water_height is always 100.
+    # This draws the water at the bottom of the canvas.
     penup()
     setposition(-canvas_width/2, -canvas_height/2)
     pendown()
@@ -99,9 +78,44 @@ def draw_water(water_height): # Gabe
     end_fill()
     right(180)
     penup()
-    setposition(0, 0)
+    setposition(0,-canvas_height/2 - 5)
     pendown()
-    shimmer(1, 10, 15, 13, 5, 1, 1, 3, 7, 4, 8, 1, -250, -150)
+
+def draw_sky(sky_height): # Gabe
+    # This draws the sky at the top of the canvas.
+    penup()
+    setposition(-canvas_width/2, canvas_height/2)
+    pendown()
+    color("#7EC0EE")
+    begin_fill()
+    forward(canvas_width)
+    right(90)
+    forward(sky_height)
+    right(90)
+    forward(canvas_width)
+    right(90)
+    forward(sky_height)
+    left(90)
+    end_fill()
+    right(180)
+    penup()
+    setposition(0,-canvas_height/2 - 5)
+    pendown()
+
+def draw_sun(radius):
+    penup()
+    setposition(-canvas_width/2, canvas_height/2 - radius)
+    pendown()
+    color("yellow")
+    begin_fill()
+    circlenostep(radius, 90)
+    left(90)
+    forward(radius)
+    left(90)
+    forward(radius)
+    left(90)
+    end_fill()
+
 
 def draw_Building(height, width, col): #Sage
     # Draws Rectangle based on given parameters
@@ -118,13 +132,14 @@ def draw_Building(height, width, col): #Sage
     end_fill()
     penup()
     forward(width/2)
-
 #---------------------------------------------------------------------
 
 # Compile Everything Here
 def draw_scene():
     drawCanvas(canvas_height,canvas_width)
+    draw_sky(300)
     draw_water(100)
+    draw_sun(100)
     inf_Circle()
 
 draw_scene()
