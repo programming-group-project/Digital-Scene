@@ -167,7 +167,73 @@ def draw_small_buidling(x, y, height, width, col): # Sage
     penup()
     right(225)
     forward(width/2)
+def draw_buildings():
+    penup()
+    building_x = -canvas_width/2 + 10
+    building_y = -canvas_height/2 + water_height
+    building_col = color_1
+    draw_small_buidling(building_x,building_y,50,20,building_col)
+    building_x += 20
+    building_col = color_3
+    draw_small_buidling(building_x,building_y,40,20,building_col)
+    building_x += 20
+    building_col = color_2
+    draw_small_buidling(building_x,building_y,20,20,building_col)
+    building_x += 20
+    draw_small_buidling(building_x,building_y,50,20,building_col)
+    building_x += 20
+    building_col = color_3
+    draw_small_buidling(building_x,building_y,40,20,building_col)
+    building_x += 20
+    building_col = color_1
+    draw_small_buidling(building_x,building_y,20,20,building_col)
+    building_x += 20
+    draw_small_buidling(building_x,building_y,50,20,building_col)
+    building_x += 20
+    building_col = color_2
+    draw_small_buidling(building_x,building_y,40,20,building_col)
+    building_x += 20
+    building_col = color_1
+    draw_small_buidling(building_x,building_y,40,20,building_col)
+    building_x += 20
+    building_col = color_2
+    draw_small_buidling(building_x,building_y,20,20,building_col)
+    building_x += 20
+    draw_small_buidling(building_x,building_y,50,20,building_col)
+    building_x += 20
+    building_col = color_3
+    draw_small_buidling(building_x,building_y,40,20,building_col)
+    building_x += 20
+    building_col = color_2
+    draw_small_buidling(building_x,building_y,20,20,building_col)
+    building_x += 20
+    draw_small_buidling(building_x,building_y,50,20,building_col)
+    building_x += 20
+    building_col = color_3
+    draw_small_buidling(building_x,building_y,40,20,building_col)
 
+    building_x += 30
+    building_col = color_1
+    draw_large_building(building_x,building_y,100,40,building_col)
+    building_x += 40
+    building_col = color_2
+    draw_large_building(building_x,building_y,80,30,building_col)
+    building_x += 30
+    building_col = color_1
+    draw_large_building(building_x,building_y,130,50,building_col)
+    building_x += 50
+    building_col = color_3
+    draw_large_building(building_x,building_y,120,40,building_col)
+    building_x += 40
+    building_col = color_1
+    draw_large_building(building_x,building_y,90,40,building_col)
+    building_x += 40
+    building_col = color_2
+    draw_large_building(building_x,building_y,100,40,building_col)
+    building_x += 30
+    building_col = color_1
+    draw_large_building(building_x,building_y,130,50,building_col)
+ 
 #---------------------------------------------------------------------
 
 # Compile Everything Here
@@ -176,6 +242,7 @@ def draw_scene():
     draw_sky(sky_height)
     draw_water(water_height)
     draw_sun(sun_size)
+    draw_buildings()
     inf_Circle()
 
 draw_scene()
