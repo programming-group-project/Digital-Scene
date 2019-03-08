@@ -1,4 +1,6 @@
 import turtle
+import math
+import random
 draw = turtle.Turtle()
 
 # QOL Functions
@@ -38,6 +40,10 @@ speed(0)
 # Variable List
 canvas_height = 400
 canvas_width = 600
+water_height = 100
+color_1 = "#979DA8"
+color_2 = "#777B82"
+color_3 = "#B3BBC9"
 
 # No Touch
 def drawCanvas(height, width):
@@ -117,9 +123,10 @@ def draw_sun(radius):
     end_fill()
 
 
-def draw_Building(height, width, col): #Sage
+def draw_large_building(x, y, height, width, col): # Sage
     # Draws Rectangle based on given parameters
     penup()
+    setposition(x,y)
     backward(width/2)
     pendown()
     color(col)
@@ -132,13 +139,41 @@ def draw_Building(height, width, col): #Sage
     end_fill()
     penup()
     forward(width/2)
+    
+def draw_small_buidling(x, y, height, width, col): # Sage
+    # Draws Rectangle based on given parameters and has roof
+    penup()
+    setposition(x,y)
+    backward(width/2)
+    pendown()
+    color(col)
+    begin_fill()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(height)
+        left(90)
+    end_fill()
+    penup()
+    setposition(x + width/2, y + height)
+    pendown()
+    begin_fill()
+    left(135)
+    forward(width / math.sqrt(2))
+    left(90)
+    forward(width / math.sqrt(2))
+    end_fill()
+    penup()
+    right(225)
+    forward(width/2)
+
 #---------------------------------------------------------------------
 
 # Compile Everything Here
 def draw_scene():
     drawCanvas(canvas_height,canvas_width)
     draw_sky(300)
-    draw_water(100)
+    draw_water(water_height)
     draw_sun(100)
     inf_Circle()
 
