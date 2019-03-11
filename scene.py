@@ -242,12 +242,13 @@ def draw_scene():
     drawCanvas(canvas_height,canvas_width)
     draw_sky(sky_height)
     draw_water(water_height)
-    draw_sun(sun_size)
     draw_buildings()
-    """
-    for i in range (canvas_height):
-        draw_sun(i)
-    """
+    num = random.randint(1, 100)
+    if (num > 5 and num < 95):
+        draw_sun(sun_size)
+    else:
+        for i in range (canvas_height):
+            draw_sun(i) 
     inf_Circle()
 
 draw_scene()
